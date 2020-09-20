@@ -1,0 +1,54 @@
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+    100% {
+        background-position: 468px 0
+    }
+}
+
+@mixin animate {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #dddddd, #fafafa);
+    background-size: 800px 104px;
+}
+
+@mixin animatedGroup($intervalDelay) {
+    @if $intervalDelay > 0 {
+        @for $i from 1 through 6 {
+            .item:nth-of-type(#{$i}) {
+                animation-delay: $i * $intervalDelay;
+            }
+        }
+    }
+}
+
+.products-loading {
+    .title {
+        @include animate();
+        width: 300px;
+        border-radius: .7em;
+        height: 30px;
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .items {
+        display: flex;
+        @include animatedGroup(0.1s);
+        .item {
+            @include animate();
+            position: relative;
+            border-radius: .7em;
+            margin: 20px;
+            width: 200px;
+            height: 300px;
+        }
+    }
+}

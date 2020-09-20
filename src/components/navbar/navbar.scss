@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap');
+
+$back-color: rgb(178, 42, 178);
+
+.navbar {
+    // border: 1px dashed red;
+    margin: auto auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    .logo {
+        h1 {
+            font-family: "Grandstander", cursive;
+            margin: 0 {
+                top: 10px;
+                bottom: 10px;
+            }
+        }
+    }
+    .links {
+        display: flex;
+        .link {
+            padding: 10px 20px 10px 20px;
+            margin: 0;
+            margin-left: 20px;
+            background: transparent;
+            border: 2px solid $back-color;
+            border-radius: 50px;
+            width: 120px;
+            text-decoration: none;
+            font-family: "Grandstander", cursive;
+            text-align: center;
+            color: $back-color;
+            // box-shadow: 0px 0px 5px $back-color;
+            &:focus {
+                outline: none;
+            }
+            &.active {
+                background: $back-color; 
+                color: #fafafa;
+            }
+            &:hover {
+                background: $back-color;
+                transition: 0.5s;
+                color: #fafafa;
+            }
+        }
+    }
+}

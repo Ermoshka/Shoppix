@@ -1,0 +1,28 @@
+.glide {
+    width: 100%;
+    .glide__track {
+        width: inherit;
+    }
+}
+
+.glide__arrow {
+    color: white;
+    background: black;
+    border: none;
+    outline: none;
+}
+
+.products-title {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: "Grandstander", cursive;
+    color: rgb(42, 42, 42);
+}
+.products-list {
+    // margin-top: 50px;
+    display: flex;
+    // width: 70%;
+    // border: 1px dashed red;
+}

@@ -1,0 +1,41 @@
+.orders {
+
+    font-family: "Grandstander", cursive;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    table {
+        background: #fafafa;
+        padding: 10px;
+        width: 100%;
+        thead, tbody {
+            width: inherit;
+        }
+        th, td {
+            text-align: center;
+            color: #1d1c1c;
+            border-bottom: 2px solid #efefef;
+        }
+    }
+
+    button {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    button.onIncrease {
+        border: 2px solid rgb(61, 195, 61);
+        color: rgb(61, 195, 61);
+    }
+    button.onDecrease {
+        border: 2px solid yellowgreen;
+        color: yellowgreen
+    }
+    button.onDelete {
+        border: 2px solid rgb(228, 77, 77);
+        color: rgb(228, 77, 77);
+    }
+    
+}
